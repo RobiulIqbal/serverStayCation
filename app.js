@@ -6,6 +6,7 @@ var logger = require('morgan');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const flash = require('connect-flash');
+const cors = require("cors");
 // import mongoose
 const mongoose = require('mongoose');
 mongoose.connect("mongodb://mongo:LCGeqiZ45ckHAretARmH@containers-us-west-60.railway.app:6614", {
@@ -22,6 +23,8 @@ const adminRouter = require('./routes/admin');
 const apiRouter = require('./routes/api');
 
 var app = express();
+
+app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
