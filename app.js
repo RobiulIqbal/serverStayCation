@@ -3,10 +3,10 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const methodOverride = require('method-override');
-const session = require('express-session');
-const flash = require("connect-flash");
 const cors = require("cors");
+const methodOverride = require("method-override");
+const session = require("express-session");
+const flash = require("connect-flash");
 // import mongoose
 const mongoose = require("mongoose");
 mongoose.connect("mongodb://mongo:LCGeqiZ45ckHAretARmH@containers-us-west-60.railway.app:6614", {
