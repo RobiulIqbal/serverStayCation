@@ -14,13 +14,13 @@ mongoose.connect("mongodb://mongo:LCGeqiZ45ckHAretARmH@containers-us-west-60.rai
   useCreateIndex: true,
   useFindAndModify: false,
 });
+const cors = require("cors");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 // router admin
 const adminRouter = require('./routes/admin');
-const apiRouter = require('./routes/api');
-const cors = require("cors");
+const apiRouter = require("./routes/api");
 
 var app = express();
 
